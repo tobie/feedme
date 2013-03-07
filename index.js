@@ -1,13 +1,17 @@
 var jerk = require("jerk");
 var fs = require("fs");
 var OPTIONS = JSON.parse(fs.readFileSync("./options.json"));
-var QUOTES =  JSON.parse(fs.readFileSync("./quotes.json"));
+var QUOTES =  {
+  manger: JSON.parse(fs.readFileSync("./quotes.json")),
+  nutella: JSON.parse(fs.readFileSync("./nutella.json"))
+};
 var INTERVAL = 60 * 1000; // one minute
 var waiting = false;
 
-function randomQuote() {
-   var i = Math.floor(Math.random() * QUOTES.length);
-   return QUOTES[i];
+function randomQuote(type) {
+   var q = QUOTES[type],
+       i = Math.floor(Math.random() * q.length);
+   return q[i];
 }
 
 jerk(function(j) {
@@ -15,8 +19,12 @@ jerk(function(j) {
     if (!waiting) {
       waiting = true;
       setTimeout(function() { waiting = false; }, INTERVAL);
-      message.say(randomQuote());
+      message.say(randomQuote('manger'));
     }
+  });
+  
+  j.watch_for(/nutella/i, function(message) {
+      message.say(randomQuote('nutella'));
   });
 }).connect(OPTIONS);
 
