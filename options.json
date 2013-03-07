@@ -1,12 +1,12 @@
 {
   "server": "irc.w3.org",
-  "nick": "feedme",
+  "nick": "Babette",
   "channels": [ "#frenchies" ],
   "user":
     {
-      "username": "feedme",
+      "username": "babette",
       "hostname": "home",
       "servername": "home",
-      "realname": "feedme"
+      "realname": "Babette"
     }
 }
