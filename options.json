@@ -1,7 +1,7 @@
 {
   "server": "irc.w3.org",
   "nick": "feedme",
-  "channels": [ "#feedme" ],
+  "channels": [ "#frenchies" ],
   "user":
     {
       "username": "feedme",
