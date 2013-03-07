@@ -26,6 +26,10 @@ jerk(function(j) {
   j.watch_for(/nutella/i, function(message) {
       message.say(randomQuote('nutella'));
   });
+  
+  j.watch_for(/festin/i, function(message) {
+      message.say("Un cri jailli du cœur de l’artiste retentit dans le monde entier, donnez-moi une chance de me surpasser.");
+  });
 }).connect(OPTIONS);
 
 
