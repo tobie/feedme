@@ -1,0 +1,18 @@
+{
+  "name": "feedme",
+  "version": "0.1.0",
+  "description": "An irc bot for that reacts to people's hunger.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jerk":    ">= 1.1.23"
+  },
+  "author": "Tobie Langel <tobie.langel@gmail.com> (http://tobielangel.com)",
+  "license": "Apache 2.0",
+  "engines": {
+    "node": "0.8.x",
+    "npm":  "1.1.x"
+  }
+}
