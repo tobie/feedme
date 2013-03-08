@@ -30,6 +30,11 @@ jerk(function(j) {
   j.watch_for(/festin/i, function(message) {
       message.say("Un cri jailli du cœur de l’artiste retentit dans le monde entier, donnez-moi une chance de me surpasser.");
   });
+  
+  j.watch_for(/au revoir,? babette/i, function(message) {
+      message.say("Au revoir.");
+      process.exit();
+  });
 }).connect(OPTIONS);
 
 
