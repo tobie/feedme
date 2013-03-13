@@ -1,12 +1,17 @@
 var jerk = require("jerk");
 var fs = require("fs");
-var OPTIONS = JSON.parse(fs.readFileSync("./options.json"));
+var OPTIONS = getJSON("./options.json");
 var QUOTES =  {
-  manger: JSON.parse(fs.readFileSync("./quotes.json")),
-  nutella: JSON.parse(fs.readFileSync("./nutella.json"))
+  manger: getJSON("./quotes.json"),
+  nutella: getJSON("./nutella.json")
 };
+
 var INTERVAL = 60 * 1000; // one minute
 var waiting = false;
+
+function getJSON(fileName) {
+  return JSON.parse(fs.readFileSync(fileName);
+}
 
 function randomQuote(type) {
    var q = QUOTES[type],
