@@ -10,7 +10,7 @@ var INTERVAL = 60 * 1000; // one minute
 var waiting = false;
 
 function getJSON(fileName) {
-  return JSON.parse(fs.readFileSync(fileName);
+  return JSON.parse(fs.readFileSync(fileName));
 }
 
 function randomQuote(type) {
