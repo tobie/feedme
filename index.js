@@ -15,7 +15,7 @@ function randomQuote(type) {
 }
 
 jerk(function(j) {
-  j.watch_for(/manger/i, function(message) {
+  j.watch_for(/manger|boire|grailler|bouffer|déjeuner|dejeuner|diner|mang3r|m4nger|m4ng3r|m@anger|m@ng3r|repas|nourriture/i, function(message) {
     if (!waiting) {
       waiting = true;
       setTimeout(function() { waiting = false; }, INTERVAL);
